@@ -22,6 +22,9 @@ export const metadata: Metadata = {
   description:
     "Free online developer tools. JSON formatter, Base64 encoder, timestamp converter and more. Fast, private, and works in your browser.",
   metadataBase: new URL("https://toolforge.dev"),
+  verification: {
+    google: "i-ifLEKR6SYtEXn3DkKp8pmsIYkFiO-U9x42pKA-HAo",
+  },
 };
 
 export default function RootLayout({
