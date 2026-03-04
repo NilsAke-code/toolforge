@@ -20,13 +20,65 @@ const FORMATTED = `{
   ]
 }`;
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: "JSON Formatter",
+  url: "https://toolforge.dev/tools/json-formatter",
+  applicationCategory: "DeveloperApplication",
+  operatingSystem: "Any",
+  offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+  description:
+    "Free JSON formatter and validator. Beautify JSON instantly, validate syntax and copy formatted JSON.",
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What is a JSON formatter?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "A JSON formatter takes compact or unreadable JSON data and reformats it with proper indentation and line breaks, making it easy to read and debug.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Does formatting JSON change the data?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "No. Formatting only changes whitespace and indentation. The actual data, keys, values, and structure remain identical.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What happens if the JSON is invalid?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The formatter will display an error message describing the syntax issue, such as an unexpected token or missing bracket.",
+      },
+    },
+  ],
+};
+
 export default function JsonFormatterPage() {
   const relatedTools = tools.filter(
     (t) => t.slug !== "json-formatter"
   );
 
   return (
-    <ToolPage
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      <ToolPage
       title="JSON Formatter"
       intro={
         <p>
@@ -89,5 +141,6 @@ export default function JsonFormatterPage() {
       ]}
       relatedTools={relatedTools}
     />
+    </>
   );
 }
