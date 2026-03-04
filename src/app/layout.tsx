@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   },
   description:
     "Free online developer tools. JSON formatter, Base64 encoder, timestamp converter and more. Fast, private, and works in your browser.",
-  metadataBase: new URL("https://toolforge.dev"),
+  metadataBase: new URL("https://toolforge-neon.vercel.app"),
   verification: {
     google: "i-ifLEKR6SYtEXn3DkKp8pmsIYkFiO-U9x42pKA-HAo",
   },
@@ -47,7 +47,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "WebSite",
               name: "ToolForge",
-              url: "https://toolforge.dev",
+              url: "https://toolforge-neon.vercel.app",
               description:
                 "Free online developer tools. JSON formatter, Base64 encoder, timestamp converter and more.",
             }),

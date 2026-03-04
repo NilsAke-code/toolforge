@@ -24,7 +24,7 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   name: "JSON Formatter",
-  url: "https://toolforge.dev/tools/json-formatter",
+  url: "https://toolforge-neon.vercel.app/tools/json-formatter",
   applicationCategory: "DeveloperApplication",
   operatingSystem: "Any",
   offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },

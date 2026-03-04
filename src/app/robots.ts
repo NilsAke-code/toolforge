@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://toolforge.dev/sitemap.xml",
+    sitemap: "https://toolforge-neon.vercel.app/sitemap.xml",
   };
 }
